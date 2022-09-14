@@ -21,11 +21,6 @@ nextBtn.addEventListener('click', () => {
     setNextQuestion()
 }); 
 
-function setNextQuestion() {
-    resetState();
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
-};
-
 var questions = [
     {
         question: 'Choose the correct HTML element for the largest heading:',
@@ -96,24 +91,24 @@ function startQuiz() {
     getQuestion();
 };
 
-function getQuestion() {
-    var currentQuestion = questions[currentQuestionIndex];
 
-    var titleEl = document.getElementById('question-title');
-    titleEl.textContent = currentQuestion.title;
+function setNextQuestion() {
+    resetState();
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
+};
 
-    choicesEl.innerHTML = "";
-
-    currentQuestion.choices.forEach(function(choice, i) {
-        var choiceNode = document.createElement('button');
-        choiceNode.setAttribute('class', 'choice');
-        choiceNode.setAttribute('value', choice);
-
-        choiceNode.textContent = i + 1 + '.' + choice;
-
-        choiceNode.onclick = questionClick;
-        choicesEl.appendChild(choiceNode);
-    });
+function getQuestion(question) {
+    questionEl.innerText = question.question
+    question.answers.forEach(answer => {
+        var button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+            answerChoiceBtn.appendChild(button)
+    })
 };
 
 function resetState() {
@@ -178,3 +173,7 @@ function saveScore() {
     }, 1000)
 };
 
+function showHighScores(initials) {
+    document.getElementById('high-scores').classList.reomove('hide')
+    document.getElementById(scoreCardEl)
+}
