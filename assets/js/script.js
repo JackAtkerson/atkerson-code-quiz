@@ -175,5 +175,5 @@ function saveScore() {
 
 function showHighScores(initials) {
     document.getElementById('high-scores').classList.reomove('hide')
-    document.getElementById(scoreCardEl)
+
 }
