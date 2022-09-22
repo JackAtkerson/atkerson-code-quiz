@@ -31,8 +31,8 @@ var questionIndex = 0;
 
 var currentTime = document.querySelector('#currentTime');
 var timer = document.querySelector('#startTime');
-var questionsDiv = document.querySelector("#questionsDiv");
-var container = document.querySelector("#container");
+var questionsDiv = document.querySelector('#questionsDiv');
+var container = document.querySelector('#container');
 
 var secondsLeft = 75;
 var holdInterval = 0;
@@ -47,7 +47,7 @@ timer.addEventListener('click', function () {
 
             if (secondsLeft <= 0) {
                 clearInterval(holdInterval);
-                allDone();
+                finish();
                 currentTime.textContent = 'Out of time';
             }
         }, 1000);
@@ -90,7 +90,7 @@ function compare(event) {
     questionIndex++;
 
     if (questionIndex >= questions.length) {
-        allDone();
+        finish();
         createDiv.textContent = 'Finished!' + 'You scored ' + score + '/' + questions.length + 'correct.';
     } else {
         render(questionIndex);
@@ -98,7 +98,7 @@ function compare(event) {
     questionsDiv.appendChild(createDiv);
 };
 
-function allDone() {
+function finish() {
     questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
 

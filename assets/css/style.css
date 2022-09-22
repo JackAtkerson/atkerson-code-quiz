@@ -75,3 +75,7 @@ li:hover {
 #highscores-btn {
     text-align: center;
 }
+#current_time {
+    display: flex;
+    justify-content: flex-start;
+}
