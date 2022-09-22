@@ -25,7 +25,7 @@ When the game is started it will look like this:
 
 ## Usage
 Visit this link to see the site in action:
-
+https://jackatkerson.github.io/atkerson-code-quiz/
 
 ## Credits
 Made by: Jack Atkerson
