@@ -11,22 +11,27 @@ h1 {
     margin-bottom:20px;
 }
 
-.container {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 80rem;
-    margin:0 auto;
+p {
+    font-size: 24px;
+    text-align: center;
 }
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
+li {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 60px;
+    margin-bottom: 2px;
+    color:orange;
+    background-color: darkblue;
+    border-radius: 8px;
+    margin: 10px;
 }
 
-.flex-center {
-    justify-content: center;
-    align-items:center;
+li:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 2px 0;
+    transition: .2s;
+    transform: scale(1.05);
 }
 
 .btn {
@@ -37,6 +42,7 @@ h1 {
     color:orange;
     background-color: darkblue;
     border-radius: 8px;
+    margin: 10px;
 }
 
 .btn:hover {
@@ -44,4 +50,28 @@ h1 {
     box-shadow: 0 2px 2px 0;
     transition: .2s;
     transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+#questionsDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+}
+
+#highscores-btn {
+    text-align: center;
 }
