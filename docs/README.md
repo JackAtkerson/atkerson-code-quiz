@@ -19,9 +19,9 @@ SO THAT I can gauge my progress compared to my peers
 
 ## Demonstration
 Upon opening the app, users will be met with this page:
-![Quiz homepage](./assets/images/quiz-demo-1.png)
+![Quiz homepage](../assets/images/quiz-demo-1.png)
 When the game is started it will look like this:
-![Quiz question](./assets/images/quiz-demo-2.png)
+![Quiz question](../assets/images/quiz-demo-2.png)
 
 ## Usage
 Visit this link to see the site in action:
